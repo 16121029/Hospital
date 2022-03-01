@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>    
+<html>    
+<head>    
+<meta name="viewport" content="width=device-width, initial-scale=1">    
+<style>    
+* {    
+  box-sizing: border-box;    
+}    
+    
+input[type=text], select, textarea {    
+  width: 100%;    
+  padding: 12px;    
+  border: 1px solid rgb(70, 68, 68);    
+  border-radius: 4px;    
+  resize: vertical;    
+}    
+input[type=email], select, textarea {    
+  width: 100%;    
+  padding: 12px;    
+  border: 1px solid rgb(70, 68, 68);    
+  border-radius: 4px;    
+  resize: vertical;    
+}    
+    
+label {    
+  padding: 12px 12px 12px 0;    
+  display: inline-block;    
+}    
+    
+input[type=submit] {    
+  background-color: rgb(37, 116, 161);    
+  color: white;    
+  padding: 12px 20px;    
+  border: none;    
+  border-radius: 4px;    
+  cursor: pointer;    
+  float: right;    
+}    
+    
+input[type=submit]:hover {    
+  background-color: #45a049;    
+}    
+    
+.container {    
+  border-radius: 5px;    
+  background-color: #f2f2f2;    
+  padding: 20px;    
+}    
+    
+.col-25 {    
+  float: left;    
+  width: 25%;    
+  margin-top: 6px;    
+}    
+    
+.col-75 {    
+  float: left;    
+  width: 75%;    
+  margin-top: 6px;    
+} 
+
+.button {
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}   
+    
+/* Clear floats after the columns */    
+.row:after {    
+  content: "";    
+  display: table;    
+  clear: both;    
+}    
+</style>    
+</head>    
+<body> 
+   
+<h2>FEED BACK FORM</h2> 
+   
+<div class="container">    
+  <form (ngSubmit)="onSubmit()">  
+    <div class="row">    
+        <div class="col-25">    
+          <label for="fname">Patient Id</label>    
+        </div>    
+        <div class="col-75">    
+          <input type="text" id="Patienid" required [(ngModel)]="feedback.p_Id" name="p_Id" placeholder="Your Patient Id.." required>    
+        </div> 
+        </div> 
+    <div class="row">    
+      <div class="col-25">    
+        <label for="fname">First Name</label>    
+      </div>    
+      <div class="col-75">    
+        <input type="text" id="fname" required [(ngModel)]="feedback.f_name" name="f_name" placeholder="Your name.." required>    
+      </div>    
+    </div>    
+    <div class="row">    
+      <div class="col-25">    
+        <label for="lname">Last Name</label>    
+      </div>    
+      <div class="col-75">    
+        <input type="text" id="lname" required [(ngModel)]="feedback.l_name" name="l_name" placeholder="Your last name.." required>    
+      </div>    
+    </div>  
+        
+    <div class="row">    
+        <div class="col-25">    
+          <label for="email">Mail Id</label>    
+        </div>    
+        <div class="col-75">    
+          <input type="email" id="email" required [(ngModel)]="feedback.emailId" name="emailId" placeholder="Your mail id.." required>    
+        </div>    
+      </div>
+      <div class="row">    
+        <div class="col-25">    
+          <label for="phoneno">Phone Number</label>    
+        </div>    
+        <div class="col-75">    
+          <input type="text" id="phoneno" required [(ngModel)]="feedback.phone_no" name="phone_no" placeholder="Your Phone NUmber.." required>    
+        </div>    
+      </div>      
+    <div class="row">    
+      <div class="col-25">    
+        <label for="country">Address</label>    
+      </div>    
+      <div class="col-75">    
+        <input type="text" id="add" required [(ngModel)]="feedback.address" name="address" placeholder="Your Address..">    
+      </div>    
+    </div>    
+    <div class="row">    
+      <div class="col-25">    
+        <label for="feed_back">Feed Back</label>    
+      </div>    
+      <div class="col-75">    
+        <textarea id="subject" required [(ngModel)]="feedback.pcomment" name="pcomment" placeholder="Write something.." style="height:200px" required></textarea>    
+      </div>    
+    </div>    
+    <div class="row">    
+      <input type="submit" value="Submit">  
+      <a routerLink="/patient" class="button">Cancel</a>
+    </div>    
+  </form>    
+</div>    
+    
+</body>    
+</html>    

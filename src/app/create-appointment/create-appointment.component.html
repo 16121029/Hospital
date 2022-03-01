@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Book appoinment page</title>
+</head>
+<body style="background-image:url(assets/images/bookback1.jpg);width:100%; height:120%">
+<div class="header">
+				<ul>
+					<li style="float:left;border-right:none"><a href="#" class="logo"><img src="assets/images/icon.png" width="35px" height="35px"><strong> Skylabs </strong>Appointment Booking System</a></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+<form action="appoi-success.html" method="post">
+	<div class="sucontainer" style="background-image:url(images/bookback.jpg)">
+		<label><b>Patient Id:</b></label><br>
+		<input type="Number" placeholder="Enter Patient Id" name="pid" required><br>
+		
+		<label><b>Name:</b></label><br>
+		<input type="text" placeholder="Enter Full name of patient" name="fname" required><br>
+		
+		<label><b>Email Id:</b></label><br>
+		<input type="email" placeholder="Enter Email Id of patient" name="email" required><br>
+		
+		<label><b>City:</b></label><br>
+		<input type="text" placeholder="Enter City " name="city" required><br>
+	
+		<label><b>Gender</b></label><br>
+		<input type="radio" name="gender" value="female">Female
+		<input type="radio" name="gender" value="male">Male
+		<input type="radio" name="gender" value="other">Other<br><br>
+		
+		
+		<label style="font-size:20px" >Doctor:</label><br>
+		<select id="doctor-list" name="Doctor" style="width:100%;height:35px;border-radius:9px">
+		<option value="">Select Doctor</option>
+		</select><br><br>
+		
+		
+		<label><b>Time:</b></label><br>
+		<input type="time" placeholder="Enter time" name="time" required><br><br>
+		
+		<label><b>Date of Visit:</b></label><br>
+		<input type="date" name="dov" required><br><br>
+		<div id="datestatus"> </div>
+		
+		<div class="container" style="background-image:url(images/bookback.jpg)">
+			<button type="button"  class="cancelbtn"><a href="patient.html">Cancel</a></button>
+			<button type="submit" name="book" style="float:right">Book</button>
+		</div>
+  </div>
+</form>	
+</body>
+</html>

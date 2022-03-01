@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+<style>
+fieldset
+{
+   
+width:40%;
+margin-right:400px;
+text-align: center;
+background-color:rosybrown;
+}
+td,tr
+{
+width:200px;
+}
+
+table{
+    font-size: 20;
+    font-style: bold;
+    color: seashell;
+    
+}
+</style>
+
+</head>
+<body style="background-image:url(assets/images/doctordesk.jpg)">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" >
+			<div class="header">
+				<ul>
+					<li style="float:left;border-right:none"><a href="#" class="logo"><img src="assets/images/icon.png" width="45px" height="45px"><strong> CareMark </strong>Appointment Booking System</a></li>
+					<li><a routerLink (click)="logout()" >Log Out</a></li>
+                    <li><a routerLink="/feedbacklist" >Feedback List</a></li>
+                    <li><a routerLink="/patientlist">Patient List</a></li>					
+				</ul>
+			</div>
+				
+				  
+			<table>
+				<td>
+				  <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+					<img class="card-img-top" src="assets/images/doctors.jpg" alt="Card image cap">
+					<div class="card-body">
+					  <h5 class="card-title">Doctors</h5>
+					  <a routerLink="" class="btn btn-primary">Add Doctors</a>
+					  <a routerLink="" class="btn btn-primary">List Of Doctors</a>
+					</div>
+				  </div>
+				</td>
+			</table>
+			<table>
+				<td>
+				  <div class="card text-white bg-primary mb-3" style="max-width: 18rem; text-align: center;">
+					<img class="card-img-top" src="assets/images/diseases.jpg" alt="Card image cap">
+					<div class="card-body">
+					  <h5 class="card-title">Diseases</h5>
+					  <a routerLink="/add_disease" class="btn btn-primary">Add Diseases</a>
+					  <a routerLink="/diseaselist" class="btn btn-primary">View Diseases</a>
+				    </div>
+				  </div>
+				</td>
+			</table>
+				
+			
+</body>
+</html>
